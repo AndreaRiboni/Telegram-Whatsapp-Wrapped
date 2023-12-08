@@ -36,15 +36,6 @@ Export the telegram chat from the desktop application in JSON format
 - Change the "Format" from HTML to JSON
 - Click "Export"
 
-### Convert to CSV
-Then move the output file "result.json" to the project root folder and run the python parser. This will convert your JSON file to a better-manageable CSV file.
-
-To run it, open the terminal and enter the following command
-> python .\telegram-chat-parser.py result.json
-
-The script will ask you for the output file path and name. You can type what you want, let's say
-> chat_dataset.csv
-
 ### Install the requirements
 Finally, it is possible to run the Jupyter Notebook. Install the needed requirements:
 > pip install -r requirements.txt
@@ -52,4 +43,7 @@ Finally, it is possible to run the Jupyter Notebook. Install the needed requirem
 ### Run the analysis
 And run the notebook. Remember to change the file path in the first cell!
 > chat_path = 'YOUR_FILE_PATH.csv'
+Also remember to specify whether the file contains a Telegram or a Whatsapp chat
+> telegram_chat = True
+
 
