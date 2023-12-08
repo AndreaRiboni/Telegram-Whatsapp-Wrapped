@@ -1,5 +1,5 @@
-# Telegram-Wrapped
-A python tool to analyze your telegram chats. This script works for both private and group chats. The employed analysis are
+# Chat-Wrapped: a chat mining application
+A python tool to analyze your telegram or whatsapp chats. This script works for both private and group chats. The employed analysis are
 - Number of messages per day
 - Number of messages per day per person
 - General statistics about the number of messages per day
@@ -24,6 +24,8 @@ A python tool to analyze your telegram chats. This script works for both private
 - Reply graph
 - Reply heatmap
 - Top repliers graph
+
+The script has been developed for Telegram chats. Whatsapp chats are supported, but since they are not standardized during the exportation (mostly the date format), it might be necessary to perform minor tweaking.
 
 ## How to use
 ### Export the chat
