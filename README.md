@@ -43,6 +43,7 @@ Finally, it is possible to run the Jupyter Notebook. Install the needed requirem
 ### Run the analysis
 And run the notebook. Remember to change the file path in the first cell!
 > chat_path = 'YOUR_FILE_PATH.csv'
+
 Also remember to specify whether the file contains a Telegram or a Whatsapp chat
 > telegram_chat = True
 
