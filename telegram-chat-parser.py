@@ -153,7 +153,7 @@ def process_message(message):
 
 def parse_telegram_to_csv(jdata):
     chat_name = get_chat_name(jdata)
-    output_filepath = input("Enter the output file path and name: ")
+    output_filepath = sys.argv[2] #input("Enter the output file path and name: ")
 
     with open(output_filepath, "w", encoding="utf-8-sig", newline="") as output_file:
         writer = csv.DictWriter(output_file, COLUMNS, dialect="unix", quoting=csv.QUOTE_NONNUMERIC)
@@ -168,12 +168,12 @@ def parse_telegram_to_csv(jdata):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         print("ERROR: incorrect number of arguments!")
         print("How to use it:")
-        print("    python3 telegram-chat-parser.py <chat_history_json>")
+        print("    python3 telegram-chat-parser.py <chat_history_json> <output_file_csv>")
         print("Example:")
-        print("    python3 telegram-chat-parser.py movies_group.json \n Enter the output file path and name: /path/to/output.csv")
+        print("    python3 telegram-chat-parser.py movies_group.json output.csv")
         sys.exit()
 
     backup_filepath = sys.argv[1]
